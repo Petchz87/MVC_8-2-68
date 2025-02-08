@@ -27,7 +27,7 @@ class DriverController:
                 driver.status = "หมดอายุ"
             elif age < 16:
                 driver.status = "ถูกระงับ"
-            self.update_driver_status(driver.license_number, driver.status)
+            self.update_driver_status(driver.license_number, driver.driver_type, driver.status)
             self.view.show_general_driver(driver)
         elif driver.driver_type == "มือใหม่":
             if age > 50:
